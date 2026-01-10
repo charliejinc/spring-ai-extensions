@@ -533,19 +533,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withN(Integer n) {
-            return n(n);
-        }
-
         public Builder model(String model) {
             options.setModel(model);
             return this;
-        }
-
-        @Deprecated
-        public Builder withModel(String model) {
-            return model(model);
         }
 
         public Builder width(Integer width) {
@@ -553,19 +543,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withWidth(Integer width) {
-            return width(width);
-        }
-
         public Builder height(Integer height) {
             options.setHeight(height);
             return this;
-        }
-
-        @Deprecated
-        public Builder withHeight(Integer height) {
-            return height(height);
         }
 
         public Builder style(String style) {
@@ -573,18 +553,7 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withStyle(String style) {
-            return style(style);
-        }
-
         public Builder seed(Integer seed) {
-            options.setSeed(seed);
-            return this;
-        }
-
-        @Deprecated
-        public Builder withSeed(Integer seed) {
             options.setSeed(seed);
             return this;
         }
@@ -594,34 +563,13 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withRefImg(String refImg) {
-            return refImg(refImg);
-        }
-
         public Builder refStrength(Float refStrength) {
             options.setRefStrength(refStrength);
             return this;
         }
 
-        @Deprecated
-        public Builder withRefStrength(Float refStrength) {
-            return refStrength(refStrength);
-        }
-
         public Builder refMode(String refMode) {
             options.setRefMode(refMode);
-            return this;
-        }
-
-        @Deprecated
-        public Builder withRefMode(String refMode) {
-            return refMode(refMode);
-        }
-
-        @Deprecated
-        public Builder withSize(String size) {
-            options.setSize(size);
             return this;
         }
 
@@ -630,19 +578,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withNegativePrompt(String negativePrompt) {
-            return negativePrompt(negativePrompt);
-        }
-
         public Builder promptExtend(Boolean promptExtend) {
             this.options.promptExtend = promptExtend;
             return this;
-        }
-
-        @Deprecated
-        public Builder withPromptExtend(Boolean promptExtend) {
-            return promptExtend(promptExtend);
         }
 
         public Builder watermark(Boolean watermark) {
@@ -650,19 +588,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withWatermark(Boolean watermark) {
-            return watermark(watermark);
-        }
-
         public Builder function(String function) {
             this.options.function = function;
             return this;
-        }
-
-        @Deprecated
-        public Builder withFunction(String function) {
-            return function(function);
         }
 
         public Builder baseImageUrl(String baseImageUrl) {
@@ -670,19 +598,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withBaseImageUrl(String baseImageUrl) {
-            return baseImageUrl(baseImageUrl);
-        }
-
         public Builder maskImageUrl(String maskImageUrl) {
             this.options.maskImageUrl = maskImageUrl;
             return this;
-        }
-
-        @Deprecated
-        public Builder withMaskImageUrl(String maskImageUrl) {
-            return maskImageUrl(maskImageUrl);
         }
 
         public Builder sketchImageUrl(String sketchImageUrl) {
@@ -690,19 +608,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withSketchImageUrl(String sketchImageUrl) {
-            return sketchImageUrl(sketchImageUrl);
-        }
-
         public Builder sketchWeight(Integer sketchWeight) {
             this.options.sketchWeight = sketchWeight;
             return this;
-        }
-
-        @Deprecated
-        public Builder withSketchWeight(Integer sketchWeight) {
-            return sketchWeight(sketchWeight);
         }
 
         public Builder sketchExtraction(Boolean sketchExtraction) {
@@ -710,19 +618,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withSketchExtraction(Boolean sketchExtraction) {
-            return sketchExtraction(sketchExtraction);
-        }
-
         public Builder sketchColor(Integer[][] sketchColor) {
             this.options.sketchColor = sketchColor;
             return this;
-        }
-
-        @Deprecated
-        public Builder withSketchColor(Integer[][] sketchColor) {
-            return sketchColor(sketchColor);
         }
 
         public Builder maskColor(Integer[][] maskColor) {
@@ -730,19 +628,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withMaskColor(Integer[][] maskColor) {
-            return maskColor(maskColor);
-        }
-
         public Builder responseFormat(String responseFormat) {
             this.options.responseFormat = responseFormat;
             return this;
-        }
-
-        @Deprecated
-        public Builder withResponseFormat(String responseFormat) {
-            return responseFormat(responseFormat);
         }
 
         public Builder maxImages(Integer maxImages) {
@@ -750,19 +638,9 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        @Deprecated
-        public Builder withMaxImages(Integer maxImages) {
-            return maxImages(maxImages);
-        }
-
         public Builder enableInterleave(Boolean enableInterleave) {
             this.options.enableInterleave = enableInterleave;
             return this;
-        }
-
-        @Deprecated
-        public Builder withEnableInterleave(Boolean enableInterleave) {
-            return enableInterleave(enableInterleave);
         }
 
         public Builder invokeMode(InvokeMode invokeMode) {
