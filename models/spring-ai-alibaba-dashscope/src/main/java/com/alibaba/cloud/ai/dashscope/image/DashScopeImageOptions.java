@@ -21,6 +21,7 @@ import com.alibaba.cloud.ai.dashscope.spec.DashScopeApiSpec.InvokeMode;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.jspecify.annotations.Nullable;
 import org.springframework.ai.image.ImageOptions;
 
 /**
@@ -36,107 +37,107 @@ public class DashScopeImageOptions implements ImageOptions {
      * The model to use for image generation.
      */
     @JsonProperty("model")
-    private String model;
+    private @Nullable String model;
 
     /**
      * The number of images to generate. Must be between 1 and 4.
      */
     @JsonProperty("n")
-    private Integer n;
+    private @Nullable Integer n;
 
     /**
      * The width of the generated images. Must be one of 720, 1024, 1280
      */
     @JsonProperty("width")
-    private Integer width;
+    private @Nullable Integer width;
 
     /**
      * The height of the generated images. Must be one of 720, 1024, 1280
      */
     @JsonProperty("height")
-    private Integer height;
+    private @Nullable Integer height;
 
     /**
      * The size of the generated images. Must be one of 1024*1024, 720*1280, 1280*720
      */
     @JsonProperty("size")
-    private String size;
+    private @Nullable String size;
 
     /**
      * The style of the generated images.Must be one of <photography>,<portrait>,<3d cartoon>,<anime>,
      * <oil painting>,<watercolor>,<sketch>,<chinese painting> <flat illustration>,<auto>
      */
     @JsonProperty("style")
-    private String style;
+    private @Nullable String style;
 
     /**
      * Sets the random number seed to use for generation. Must be between 0 and 4294967290.
      */
     @JsonProperty("seed")
-    private Integer seed;
+    private @Nullable Integer seed;
 
     /**
      * refer image,Support jpg, png, tiff, webp
      */
     @JsonProperty("ref_img")
-    private String refImg;
+    private @Nullable String refImg;
 
     /**
      * refer strength,Must be between 0.0 and 1.0
      */
     @JsonProperty("ref_strength")
-    private Float refStrength;
+    private @Nullable Float refStrength;
 
     /**
      * The format in which the generated images are returned. Must be one of url or b64_json.
      */
     @JsonProperty("response_format")
-    private String responseFormat;
+    private @Nullable String responseFormat;
 
     /**
      * refer mode,Must be one of repaint,refonly
      */
     @JsonProperty("ref_mode")
-    private String refMode;
+    private @Nullable String refMode;
 
     @JsonProperty("negative_prompt")
-    private String negativePrompt;
+    private @Nullable String negativePrompt;
 
     @JsonProperty("prompt_extend")
-    private Boolean promptExtend;
+    private @Nullable Boolean promptExtend;
 
     @JsonProperty("watermark")
-    private Boolean watermark;
+    private @Nullable Boolean watermark;
 
     @JsonProperty("function")
-    private String function;
+    private @Nullable String function;
 
     @JsonProperty("base_image_url")
-    private String baseImageUrl;
+    private @Nullable String baseImageUrl;
 
     @JsonProperty("mask_image_url")
-    private String maskImageUrl;
+    private @Nullable String maskImageUrl;
 
     @JsonProperty("sketch_image_url")
-    private String sketchImageUrl;
+    private @Nullable String sketchImageUrl;
 
     @JsonProperty("sketch_weight")
-    private Integer sketchWeight;
+    private @Nullable Integer sketchWeight;
 
     @JsonProperty("sketch_extraction")
-    private Boolean sketchExtraction;
+    private @Nullable Boolean sketchExtraction;
 
     @JsonProperty("sketch_color")
-    private Integer[][] sketchColor;
+    private Integer @Nullable [][] sketchColor;
 
     @JsonProperty("mask_color")
-    private Integer[][] maskColor;
+    private Integer @Nullable [][] maskColor;
 
     @JsonProperty("max_images")
-    private Integer maxImages;
+    private @Nullable Integer maxImages;
 
     @JsonProperty("enable_interleave")
-    private Boolean enableInterleave;
+    private @Nullable Boolean enableInterleave;
 
     /**
      * Invocation mode for the API call.
@@ -152,155 +153,155 @@ public class DashScopeImageOptions implements ImageOptions {
      * Output aspect ratio for out-painting, e.g. "4:3".
      */
     @JsonProperty("output_ratio")
-    private String outputRatio;
+    private @Nullable String outputRatio;
 
     /**
      * Horizontal expansion scale for out-painting.
      */
     @JsonProperty("x_scale")
-    private Float xScale;
+    private @Nullable Float xScale;
 
     /**
      * Vertical expansion scale for out-painting.
      */
     @JsonProperty("y_scale")
-    private Float yScale;
+    private @Nullable Float yScale;
 
     /**
      * Rotation angle in degrees for out-painting.
      */
     @JsonProperty("angle")
-    private Integer angle;
+    private @Nullable Integer angle;
 
     /**
      * Left expansion in pixels for out-painting.
      */
     @JsonProperty("left_offset")
-    private Integer leftOffset;
+    private @Nullable Integer leftOffset;
 
     /**
      * Right expansion in pixels for out-painting.
      */
     @JsonProperty("right_offset")
-    private Integer rightOffset;
+    private @Nullable Integer rightOffset;
 
     /**
      * Top expansion in pixels for out-painting.
      */
     @JsonProperty("top_offset")
-    private Integer topOffset;
+    private @Nullable Integer topOffset;
 
     /**
      * Bottom expansion in pixels for out-painting.
      */
     @JsonProperty("bottom_offset")
-    private Integer bottomOffset;
+    private @Nullable Integer bottomOffset;
 
     /**
      * Whether to use best quality mode for out-painting.
      */
     @JsonProperty("best_quality")
-    private Boolean bestQuality;
+    private @Nullable Boolean bestQuality;
 
     /**
      * Whether to limit output image size for out-painting.
      */
     @JsonProperty("limit_image_size")
-    private Boolean limitImageSize;
+    private @Nullable Boolean limitImageSize;
 
-    public Boolean getPromptExtend() {
+    public @Nullable Boolean getPromptExtend() {
         return promptExtend;
     }
 
-    public void setPromptExtend(Boolean promptExtend) {
+    public void setPromptExtend(@Nullable Boolean promptExtend) {
         this.promptExtend = promptExtend;
     }
 
-    public Boolean getWatermark() {
+    public @Nullable Boolean getWatermark() {
         return watermark;
     }
 
-    public void setWatermark(Boolean watermark) {
+    public void setWatermark(@Nullable Boolean watermark) {
         this.watermark = watermark;
     }
 
-    public String getFunction() {
+    public @Nullable String getFunction() {
         return function;
     }
 
-    public void setFunction(String function) {
+    public void setFunction(@Nullable String function) {
         this.function = function;
     }
 
-    public String getBaseImageUrl() {
+    public @Nullable String getBaseImageUrl() {
         return baseImageUrl;
     }
 
-    public void setBaseImageUrl(String baseImageUrl) {
+    public void setBaseImageUrl(@Nullable String baseImageUrl) {
         this.baseImageUrl = baseImageUrl;
     }
 
-    public String getMaskImageUrl() {
+    public @Nullable String getMaskImageUrl() {
         return maskImageUrl;
     }
 
-    public void setMaskImageUrl(String maskImageUrl) {
+    public void setMaskImageUrl(@Nullable String maskImageUrl) {
         this.maskImageUrl = maskImageUrl;
     }
 
-    public String getSketchImageUrl() {
+    public @Nullable String getSketchImageUrl() {
         return sketchImageUrl;
     }
 
-    public void setSketchImageUrl(String sketchImageUrl) {
+    public void setSketchImageUrl(@Nullable String sketchImageUrl) {
         this.sketchImageUrl = sketchImageUrl;
     }
 
-    public Integer getSketchWeight() {
+    public @Nullable Integer getSketchWeight() {
         return sketchWeight;
     }
 
-    public void setSketchWeight(Integer sketchWeight) {
+    public void setSketchWeight(@Nullable Integer sketchWeight) {
         this.sketchWeight = sketchWeight;
     }
 
-    public Boolean getSketchExtraction() {
+    public @Nullable Boolean getSketchExtraction() {
         return sketchExtraction;
     }
 
-    public void setSketchExtraction(Boolean sketchExtraction) {
+    public void setSketchExtraction(@Nullable Boolean sketchExtraction) {
         this.sketchExtraction = sketchExtraction;
     }
 
-    public Integer[][] getSketchColor() {
+    public Integer @Nullable [][] getSketchColor() {
         return sketchColor;
     }
 
-    public void setSketchColor(Integer[][] sketchColor) {
+    public void setSketchColor(Integer @Nullable [][] sketchColor) {
         this.sketchColor = sketchColor;
     }
 
-    public Integer[][] getMaskColor() {
+    public Integer @Nullable [][] getMaskColor() {
         return maskColor;
     }
 
-    public void setMaskColor(Integer[][] maskColor) {
+    public void setMaskColor(Integer @Nullable [][] maskColor) {
         this.maskColor = maskColor;
     }
 
-    public void setMaxImages(Integer maxImages) {
+    public void setMaxImages(@Nullable Integer maxImages) {
         this.maxImages = maxImages;
     }
 
-    public Integer getMaxImages() {
+    public @Nullable Integer getMaxImages() {
         return maxImages;
     }
 
-    public Boolean getEnableInterleave() {
+    public @Nullable Boolean getEnableInterleave() {
         return enableInterleave;
     }
 
-    public void setEnableInterleave(Boolean enableInterleave) {
+    public void setEnableInterleave(@Nullable Boolean enableInterleave) {
         this.enableInterleave = enableInterleave;
     }
 
@@ -312,7 +313,7 @@ public class DashScopeImageOptions implements ImageOptions {
         this.invokeMode = invokeMode;
     }
 
-    public String getOutputRatio() {
+    public @Nullable String getOutputRatio() {
         return outputRatio;
     }
 
@@ -320,75 +321,75 @@ public class DashScopeImageOptions implements ImageOptions {
         this.outputRatio = outputRatio;
     }
 
-    public Float getXScale() {
+    public @Nullable Float getXScale() {
         return xScale;
     }
 
-    public void setXScale(Float xScale) {
+    public void setXScale(@Nullable Float xScale) {
         this.xScale = xScale;
     }
 
-    public Float getYScale() {
+    public @Nullable Float getYScale() {
         return yScale;
     }
 
-    public void setYScale(Float yScale) {
+    public void setYScale(@Nullable Float yScale) {
         this.yScale = yScale;
     }
 
-    public Integer getAngle() {
+    public @Nullable Integer getAngle() {
         return angle;
     }
 
-    public void setAngle(Integer angle) {
+    public void setAngle(@Nullable Integer angle) {
         this.angle = angle;
     }
 
-    public Integer getLeftOffset() {
+    public @Nullable Integer getLeftOffset() {
         return leftOffset;
     }
 
-    public void setLeftOffset(Integer leftOffset) {
+    public void setLeftOffset(@Nullable Integer leftOffset) {
         this.leftOffset = leftOffset;
     }
 
-    public Integer getRightOffset() {
+    public @Nullable Integer getRightOffset() {
         return rightOffset;
     }
 
-    public void setRightOffset(Integer rightOffset) {
+    public void setRightOffset(@Nullable Integer rightOffset) {
         this.rightOffset = rightOffset;
     }
 
-    public Integer getTopOffset() {
+    public @Nullable Integer getTopOffset() {
         return topOffset;
     }
 
-    public void setTopOffset(Integer topOffset) {
+    public void setTopOffset(@Nullable Integer topOffset) {
         this.topOffset = topOffset;
     }
 
-    public Integer getBottomOffset() {
+    public @Nullable Integer getBottomOffset() {
         return bottomOffset;
     }
 
-    public void setBottomOffset(Integer bottomOffset) {
+    public void setBottomOffset(@Nullable Integer bottomOffset) {
         this.bottomOffset = bottomOffset;
     }
 
-    public Boolean getBestQuality() {
+    public @Nullable Boolean getBestQuality() {
         return bestQuality;
     }
 
-    public void setBestQuality(Boolean bestQuality) {
+    public void setBestQuality(@Nullable Boolean bestQuality) {
         this.bestQuality = bestQuality;
     }
 
-    public Boolean getLimitImageSize() {
+    public @Nullable Boolean getLimitImageSize() {
         return limitImageSize;
     }
 
-    public void setLimitImageSize(Boolean limitImageSize) {
+    public void setLimitImageSize(@Nullable Boolean limitImageSize) {
         this.limitImageSize = limitImageSize;
     }
 
@@ -397,58 +398,58 @@ public class DashScopeImageOptions implements ImageOptions {
     }
 
     @Override
-    public Integer getN() {
+    public @Nullable Integer getN() {
         return this.n;
     }
 
-    public void setN(Integer n) {
+    public void setN(@Nullable Integer n) {
         this.n = n;
     }
 
     @Override
-    public String getModel() {
+    public @Nullable String getModel() {
         return this.model;
     }
 
-    public void setModel(String model) {
+    public void setModel(@Nullable String model) {
         this.model = model;
     }
 
     @Override
-    public Integer getWidth() {
+    public @Nullable Integer getWidth() {
         return this.width;
     }
 
-    public void setWidth(Integer width) {
+    public void setWidth(@Nullable Integer width) {
         this.width = width;
-        this.size = this.width + "*" + this.height;
+        this.size = this.width != null && this.height != null ? this.width + "*" + this.height : null;
     }
 
     @Override
-    public Integer getHeight() {
+    public @Nullable Integer getHeight() {
         return this.height;
     }
 
-    public void setHeight(Integer height) {
+    public void setHeight(@Nullable Integer height) {
         this.height = height;
-        this.size = this.width + "*" + this.height;
+        this.size = this.width != null && this.height != null ? this.width + "*" + this.height : null;
     }
 
     @Override
-    public String getResponseFormat() {
+    public @Nullable String getResponseFormat() {
         return this.responseFormat;
     }
 
     @Override
-    public String getStyle() {
+    public @Nullable String getStyle() {
         return this.style;
     }
 
-    public void setStyle(String style) {
+    public void setStyle(@Nullable String style) {
         this.style = style;
     }
 
-    public String getSize() {
+    public @Nullable String getSize() {
 
         if (this.size != null) {
             return this.size;
@@ -457,47 +458,47 @@ public class DashScopeImageOptions implements ImageOptions {
     }
 
     @Deprecated
-    public void setSize(String size) {
+    public void setSize(@Nullable String size) {
         this.size = size;
     }
 
-    public Integer getSeed() {
+    public @Nullable Integer getSeed() {
         return seed;
     }
 
-    public void setSeed(Integer seed) {
+    public void setSeed(@Nullable Integer seed) {
         this.seed = seed;
     }
 
-    public String getRefImg() {
+    public @Nullable String getRefImg() {
         return refImg;
     }
 
-    public void setRefImg(String refImg) {
+    public void setRefImg(@Nullable String refImg) {
         this.refImg = refImg;
     }
 
-    public Float getRefStrength() {
+    public @Nullable Float getRefStrength() {
         return refStrength;
     }
 
-    public void setRefStrength(Float refStrength) {
+    public void setRefStrength(@Nullable Float refStrength) {
         this.refStrength = refStrength;
     }
 
-    public String getRefMode() {
+    public @Nullable String getRefMode() {
         return refMode;
     }
 
-    public void setRefMode(String refMode) {
+    public void setRefMode(@Nullable String refMode) {
         this.refMode = refMode;
     }
 
-    public String getNegativePrompt() {
+    public @Nullable String getNegativePrompt() {
         return negativePrompt;
     }
 
-    public void setNegativePrompt(String negativePrompt) {
+    public void setNegativePrompt(@Nullable String negativePrompt) {
         this.negativePrompt = negativePrompt;
     }
 
@@ -528,117 +529,117 @@ public class DashScopeImageOptions implements ImageOptions {
             this.options = new DashScopeImageOptions();
         }
 
-        public Builder n(Integer n) {
+        public Builder n(@Nullable Integer n) {
             options.setN(n);
             return this;
         }
 
-        public Builder model(String model) {
+        public Builder model(@Nullable String model) {
             options.setModel(model);
             return this;
         }
 
-        public Builder width(Integer width) {
+        public Builder width(@Nullable Integer width) {
             options.setWidth(width);
             return this;
         }
 
-        public Builder height(Integer height) {
+        public Builder height(@Nullable Integer height) {
             options.setHeight(height);
             return this;
         }
 
-        public Builder style(String style) {
+        public Builder style(@Nullable String style) {
             options.setStyle(style);
             return this;
         }
 
-        public Builder seed(Integer seed) {
+        public Builder seed(@Nullable Integer seed) {
             options.setSeed(seed);
             return this;
         }
 
-        public Builder refImg(String refImg) {
+        public Builder refImg(@Nullable String refImg) {
             options.setRefImg(refImg);
             return this;
         }
 
-        public Builder refStrength(Float refStrength) {
+        public Builder refStrength(@Nullable Float refStrength) {
             options.setRefStrength(refStrength);
             return this;
         }
 
-        public Builder refMode(String refMode) {
+        public Builder refMode(@Nullable String refMode) {
             options.setRefMode(refMode);
             return this;
         }
 
-        public Builder negativePrompt(String negativePrompt) {
+        public Builder negativePrompt(@Nullable String negativePrompt) {
             options.setNegativePrompt(negativePrompt);
             return this;
         }
 
-        public Builder promptExtend(Boolean promptExtend) {
+        public Builder promptExtend(@Nullable Boolean promptExtend) {
             this.options.promptExtend = promptExtend;
             return this;
         }
 
-        public Builder watermark(Boolean watermark) {
+        public Builder watermark(@Nullable Boolean watermark) {
             this.options.watermark = watermark;
             return this;
         }
 
-        public Builder function(String function) {
+        public Builder function(@Nullable String function) {
             this.options.function = function;
             return this;
         }
 
-        public Builder baseImageUrl(String baseImageUrl) {
+        public Builder baseImageUrl(@Nullable String baseImageUrl) {
             this.options.baseImageUrl = baseImageUrl;
             return this;
         }
 
-        public Builder maskImageUrl(String maskImageUrl) {
+        public Builder maskImageUrl(@Nullable String maskImageUrl) {
             this.options.maskImageUrl = maskImageUrl;
             return this;
         }
 
-        public Builder sketchImageUrl(String sketchImageUrl) {
+        public Builder sketchImageUrl(@Nullable String sketchImageUrl) {
             this.options.sketchImageUrl = sketchImageUrl;
             return this;
         }
 
-        public Builder sketchWeight(Integer sketchWeight) {
+        public Builder sketchWeight(@Nullable Integer sketchWeight) {
             this.options.sketchWeight = sketchWeight;
             return this;
         }
 
-        public Builder sketchExtraction(Boolean sketchExtraction) {
+        public Builder sketchExtraction(@Nullable Boolean sketchExtraction) {
             this.options.sketchExtraction = sketchExtraction;
             return this;
         }
 
-        public Builder sketchColor(Integer[][] sketchColor) {
+        public Builder sketchColor(Integer @Nullable [][] sketchColor) {
             this.options.sketchColor = sketchColor;
             return this;
         }
 
-        public Builder maskColor(Integer[][] maskColor) {
+        public Builder maskColor(Integer @Nullable [][] maskColor) {
             this.options.maskColor = maskColor;
             return this;
         }
 
-        public Builder responseFormat(String responseFormat) {
+        public Builder responseFormat(@Nullable String responseFormat) {
             this.options.responseFormat = responseFormat;
             return this;
         }
 
-        public Builder maxImages(Integer maxImages) {
+        public Builder maxImages(@Nullable Integer maxImages) {
             this.options.maxImages = maxImages;
             return this;
         }
 
-        public Builder enableInterleave(Boolean enableInterleave) {
+        public Builder enableInterleave(@Nullable Boolean enableInterleave) {
             this.options.enableInterleave = enableInterleave;
             return this;
         }
@@ -648,52 +649,52 @@ public class DashScopeImageOptions implements ImageOptions {
             return this;
         }
 
-        public Builder outputRatio(String outputRatio) {
+        public Builder outputRatio(@Nullable String outputRatio) {
             this.options.outputRatio = outputRatio;
             return this;
         }
 
-        public Builder xScale(Float xScale) {
+        public Builder xScale(@Nullable Float xScale) {
             this.options.xScale = xScale;
             return this;
         }
 
-        public Builder yScale(Float yScale) {
+        public Builder yScale(@Nullable Float yScale) {
             this.options.yScale = yScale;
             return this;
         }
 
-        public Builder angle(Integer angle) {
+        public Builder angle(@Nullable Integer angle) {
             this.options.angle = angle;
             return this;
         }
 
-        public Builder leftOffset(Integer leftOffset) {
+        public Builder leftOffset(@Nullable Integer leftOffset) {
             this.options.leftOffset = leftOffset;
             return this;
         }
 
-        public Builder rightOffset(Integer rightOffset) {
+        public Builder rightOffset(@Nullable Integer rightOffset) {
             this.options.rightOffset = rightOffset;
             return this;
         }
 
-        public Builder topOffset(Integer topOffset) {
+        public Builder topOffset(@Nullable Integer topOffset) {
             this.options.topOffset = topOffset;
             return this;
         }
 
-        public Builder bottomOffset(Integer bottomOffset) {
+        public Builder bottomOffset(@Nullable Integer bottomOffset) {
             this.options.bottomOffset = bottomOffset;
             return this;
         }
 
-        public Builder bestQuality(Boolean bestQuality) {
+        public Builder bestQuality(@Nullable Boolean bestQuality) {
             this.options.bestQuality = bestQuality;
             return this;
         }
 
-        public Builder limitImageSize(Boolean limitImageSize) {
+        public Builder limitImageSize(@Nullable Boolean limitImageSize) {
             this.options.limitImageSize = limitImageSize;
             return this;
         }
