@@ -1022,6 +1022,14 @@ public class DashScopeApiSpec {
             public MediaContent(String type, String text, String image, Object video, String audio, Double fps) {
                 this(type, text, image, video, audio, fps, null);
             }
+
+            /**
+             * Constructor kept for binary compatibility with the pre-fps signature.
+             */
+            public MediaContent(String type, String text, String image, Object video, String audio,
+                                Map<String, String> cacheControl) {
+                this(type, text, image, video, audio, null, cacheControl);
+            }
         }
 
         /**
